@@ -9,4 +9,4 @@ En el primer tema vamos a trabajar con Markdown que es un lenguaje sencillo de m
 2. Cómo escribir títulos y subtítulos 
 3. Cómo crear listas no numeradas y numeradas
 4. Establecer enlaces como [este]https://markdown.es/sintaxis-markdown/
-**Un ejemplo de cursiva**
+**Un ejemplo de negrita**
