@@ -1,5 +1,5 @@
 # Repositorio de Lenguaje de Marcas
-## Hann077
+## rebecaleon077
 En este repositorio vamos a alojar todos los ficheros que vayamos desarrollando durante el curso. En el primer tema de LM tendréis que instalar:
 -git
 -Visual Studio Code
@@ -9,4 +9,4 @@ En el primer tema vamos a trabajar con Markdown que es un lenguaje sencillo de m
 2. Cómo escribir títulos y subtítulos 
 3. Cómo crear listas no numeradas y numeradas
 4. Establecer enlaces como [este]https://markdown.es/sintaxis-markdown/
-**Un ejemplo de negrita**
+**Ejemplo en negrita**
