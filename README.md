@@ -1,5 +1,5 @@
 # Repositorio de Lenguaje de Marcas
-## Hann077
+## rebecaleon077
 En este repositorio vamos a alojar todos los ficheros que vayamos desarrollando durante el curso. En el primer tema de LM tendréis que instalar:
 -git
 -Visual Studio Code
