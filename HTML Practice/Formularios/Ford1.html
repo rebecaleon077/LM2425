@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+</head>
+<body>
+
+    <form action="">
+        <fieldset>
+            <!--Opciones-->
+            <legend>Rellenar</legend>
+            <input type="radio" name="idioma" id="">Inglés <br>
+            <input type="radio" name="idioma" id=""> Alemán <br>
+            <input type="radio" name="idioma" id="">Francés <br>
+            <!--Desplegable-->
+            <select name="conector" id="">
+                <option value="usb">USB</option>
+                <option value="Paralelo">Paralelo</option>
+                <option value="Ps2">PS2</option>
+            </select>
+             <!--Cajas de texto-->
+            
+            <br><label for="">Nombre:</label>
+            <input type="text" name="nombre" id="">
+            <br>
+            <label for="">Apellidos:</label>
+            <input type="text" name="apellidos" id="">
+            <br>
+            <!--Casillas de verificación-->
+            <label for="">Mujer:</label>
+            <input type="checkbox" name="mujer" id="">
+            <label for="">Hombre:</label>
+            <input type="checkbox" name="hombre" id="">
+            <br>
+            <label for="">Elija una fecha:</label>
+            <input type="date" name="fecha" id="" value="dd/mm/aaaa">
+        </fieldset>
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            <select multiple name="sexo" id="sexo" >
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+            </select>
+            <br>
+            <label for="">Mujer:</label>
+            <input type="checkbox" name="mujer" id="">
+            <label for="">Hombre:</label>
+            <input type="checkbox" name="hombre" id="">
+            <br>
+            <label for="">Elija una fecha:</label>
+            <input type="date" name="fecha" id="" value="dd/mm/aaaa">
+        </fieldset>
+    </form>
+</body>
+</html>
