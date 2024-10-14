@@ -8,15 +8,66 @@
 <body>
     <form action="">
         <fieldset>
-        <legend>Complete, por favor</legend>
-        <label for="hora"> Elija una hora: 
-            <input type="time" name="time"  id="hora"></label>
-            <br>
-            <textarea name="texto" id="" rows="6" cols="45" placeholder="Utilice este cuadro para escribir"></textarea>
-            <br>
-        
-        
-        </fieldset>
+            <legend>Complete por favor</legend>
+            <label for="hour">Eliga una hora</label>
+        <input type="time" name="time" id="hour">
+        <br>
+        <textarea name="message" rows="6" cols="45">
+Utilice este cuadro para escribir
+        </textarea>
+        <br>
+        <input type="radio" name="lenguaje" value="lenguajejava"> Java
+        <br>
+        <input type="radio" name="lenguaje" value="lenguajepython"> Python
+        <br>
+        <input type="radio" name="lenguaje" value="lenguajehtml"> HTML
+   <br>
+   <input type="radio" name="lenguaje" value="lenguajevisual_basic"> Visual Basic
+    <br>
+    <br>
+    <label for="ifile">Elije un fichero:</label>
+    <input type="file" name="file" id="ifile">
+    <br>
+    <label for="idate">Elije una fecha:</label>
+    <input type="date" name="date" id="idate">
+    <br>
+    <label for="icolor">Elije un color:</label>
+    <input type="color" name="color" id="icolor">
+</fieldset>
+<fieldset>
+    <legend>Rellena las opciones siguientes</legend>
+<input type="checkbox" name="procesador" value="procesadorintel"> Intel
+<br>
+<input type="checkbox" name="procesador" value="procesadoramd"> AMD
+<br>
+<br>
+<label for="idate1">Elije una fecha:</label>
+<input type="date" name="date" id="idate1">
+<br>
+<label for="ifile1">Elije un fichero:</label>
+<input type="file" name="file" id="ifile1">
+<br>
+<input type="radio" name="procesador" value="procesadoramd">AMD
+<input type="radio" name="procesador" value="procesadorintel_i5">Intel i5
+<input type="radio" name="procesador" value="procesadorintel_i7">Intel i7
+<br>
+<textarea name="message" rows="4" cols="55">Utilice este recuadro para escribir
+            </textarea>
+<br>
+<label for="idni"> DNI:</label>
+<input type="text" name="dni" id="idni" placeholder="DNI">
+<br>
+<label for="inombre"> Nombre:</label>
+<input type="text" name="nombre" id="inombre" placeholder="Nombre">
+ <br>
+ <label for="iapellidos"> Apellidos:</label>
+ <input type="text" name="apellidos" id="iapellidos" placeholder="Apellidos">
+ <br>
+ <label for="itelefono"> Teléfono:</label>
+ <input type="text" name="telefono" id="itelefono" placeholder="Teléfono" >
+<br>
+<input type="color" name="color">
+</fieldset>
     </form>
 </body>
 </html>
