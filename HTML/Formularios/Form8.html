@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de pago</title>
+</head>
+<body>
+<form action="">
+<fieldset>
+    <h2>FORMULARIO DE PAGO (Los campos obligatorios se han marcado con *)</h2>
+    <section>
+    <fieldset>
+        <legend><b>Información de contacto</b></legend>
+        <fieldset>
+            <legend>Profesión</legend>
+            <label for="iprofesor">  <input type="radio" name="profesion" id="iprofesor"> Profesor</label>
+            <br>
+            <label for="iestudiante"><input type="radio" name="profesion" id="iestudiante">Estudiante</label>
+            <br>
+         <label for="iotro"> <input type="radio" name="profesion" id="iotro">Otro</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Tratamiento</legend>
+            <label for="isr">  <input type="radio" name="treatment" id="isr">Sr/Sra</label>
+            <br>
+            <label for="idr"><input type="radio" name="treatment" id="idr">Dr/Dra</label>
+            <br>
+         <label for="iotro1"> <input type="radio" name="treatment" id="iotro1">Otro</label>
+         <br><br>
+         <label for="inombre">Nombre:*<br><input type="text" name="name" id="inombre" required></label>
+         <br>
+         <label for="iemail">Correo:* <br><input type="email" name="correo" id="iemail" required></label>
+         <br>
+         <label for="telefono">Número de teléfono:* <br><input type="tel" name="telefono" id="itelefono" required></label>
+        <br>
+        <label for="ipass">Contraseña:* <br><input type="password" name="pass" id="ipass"></label>
+        </fieldset>
+    </fieldset>
+</section>
+<section>
+    <fieldset>
+        <legend>Información de pago</legend>
+        <label for="itarjeta">Tipo de tarjeta:<select name="tarjeta" id="itarjeta">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="americanexpress">American Express</option>
+        </select></label>
+        <br>
+<label for=""></label>
+    </fieldset>
+</section>
+</fieldset>
+</form>
+</body>
+</html>
