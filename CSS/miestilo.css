@@ -1,0 +1,10 @@
+/*
+EStilos de mi página webg.
+Realizado por Rebeca León.
+*/
+p
+{
+    font-size: 200%;
+    color: red;
+    text-indent: 30px; /*Identación de los párrafos*/
+}
