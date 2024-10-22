@@ -48,11 +48,20 @@
             <option value="americanexpress">American Express</option>
         </select></label>
         <br>
-<label for="in_tarjeta">Número de tarjeta:* <br><input type="number" name="n_tarjeta" id="in_tarjeta"></label>
+<label for="in_tarjeta">Número de tarjeta:* <br><input type="number" name="n_tarjeta" id="in_tarjeta" required></label>
    <br>
-<label for="ifecha">Fecha de caducidad:* <br><input type="date" name="fecha" id="ifecha"></label>
+<label for="ifecha">Fecha de caducidad:* <br><input type="date" name="fecha" id="ifecha" required></label>
+<br>
+<label for="icuenta">Cuenta de Paypal:* <br><input type="text" name="cuenta" id="icuenta" required></label>
+<br>
+<label for="imetodo">Método de pago preferido: <select name="tarjeta_credito" id="itarjeta_credito" required>
+    <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+    <option value="Paypal">Paypal</option>
+</select></label>
 </fieldset>
 </section>
+<br>
+<input type="submit" name="validacion" id="ivalidacion" value="VALIDAR EL PAGO">
 </fieldset>
 </form>
 </body>
