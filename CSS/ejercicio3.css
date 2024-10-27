@@ -1,0 +1,16 @@
+/* Titulo alineado a la izquierda */
+h3{
+    text-align: left;
+    background-color: coral;
+}
+/* Párrafo centrado*/
+.centrado{
+   text-align: center;
+   background-color: lightgreen;
+
+}
+/* Párrafo alineado a la derecha*/
+#derecha{
+    text-align: right;
+    background-color: lightcoral;
+}
