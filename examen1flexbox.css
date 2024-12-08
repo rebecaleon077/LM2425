@@ -1,0 +1,18 @@
+body{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;   
+}
+div{
+    width: 80%;
+    margin: 0 auto;
+}
+header{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b28306;
+}
