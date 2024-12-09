@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: lightgray;
+    margin: 20px 200px;
+}
+body, input, textarea, select{
+    font-variant-caps: small-caps;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Open Sans Condensed';
+}
+header{
+    margin-bottom: 20px;
+}
+fieldset{
+    border: none;
+}
+form{
+    border: 1px solid black;
+    padding: 0 10px;
+    background-color: white;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    row-gap: 1em;
+}
+textarea{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-end: span 10;
+    font-variant-caps: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+#power{
+    width: 1em;
+    height: 1em;
+}
