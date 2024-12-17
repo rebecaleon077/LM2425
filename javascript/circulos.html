@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulos ejercicio JavaScript</title>
+<script src="circulos.js"></script>
+<style>
+    .contenedor{
+        display: flex;
+        justify-content:space-around;
+        width: 600px;
+
+    }
+    .circulo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    #rojo{    
+        background-color: red;
+    }
+    #azul{
+        background-color: blue;
+    }
+    #verde{
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+    <h1>Circulos</h1>
+    <div class="contenedor">
+        <div class="circulo" id="rojo"></div>
+        <div class="circulo" id="verde"></div>
+        <div class="circulo" id="azul"></div>
+    </div>
+    <div class="contenedor">
+<button onclick="ocultar('rojo')">Ocultar</button>
+<button onclick="ocultar('verde')">Ocultar</button>
+<button onclick="ocultar('azul')">Ocultar</button>
+    </div>
+    <div class="contenedor">
+        <button onclick="mostrar('rojo')">Ocultar</button>
+        <button onclick="mostrar('verde')">Ocultar</button>
+        <button onclick="mostrar('azul')">Ocultar</button>
+            </div>
+</body>
+</html>
