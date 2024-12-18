@@ -6,6 +6,21 @@
     <title>Javascript 7</title>
 </head>
 <body>
-    
+    <h1>Sintaxis de JavaScript</h1>
+    <p>Creación de una variable y visualización en pantalla</p>
+    <p id="parrafo"></p>
+    <script>
+        //Comentario de una única línea
+        /*Comentario de 
+        varias
+        lineas*/
+        var cadena = "Esto es una cadena";/*Asignar la parte derecha a la parte izquierda, es decir da valores*/
+        document.getElementById("parrafo").innerHTML = cadena;
+        let numero = 10; y = -4.2;
+        let x = 5.8;
+        let cadena2 = "La suma es : "
+        alert(cadena2 + (x + y)); //El operador '+' aplicado en la cadena CONCATENA
+        document.write(numero);
+    </script>
 </body>
 </html>
