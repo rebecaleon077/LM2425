@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Javascrpit
+
+    </title>
+</head>
+<body>
+<label for="usuariox">Usuario <br><input type="text" name="" id="usuariox"></label>
+<br>
+<label for="contraseñay">Contraseña <br><input type="password" name="" id="contraseñay"></label>
+<br>
+<button onclick="mensaje()">Login</button>
+<script>
+    function mensaje(){
+        var usuario;
+        usuario = document.getElementById("usuariox").value;
+        var contraseña;
+        contraseña = document.getElementById("contraseñay").value;
+        alert("Bienvenido usuario " + usuario +" con la contraseña " + contraseña)
+    }
+</script>
+</body>
+</html>

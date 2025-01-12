@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Javascript</title>
+<style>
+    body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;    
+    }
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5%;
+}
+input{
+    padding: 8px;
+    width: 200px;
+}
+</style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Conversor euros a dólares</h1>
+        <input type="number" step="0.01" id="euro" placeholder="Euro(€)">
+        <br>
+        <button onclick="conversor1()">=</button>
+        <br>
+        <input type="number"step="0.01" id="dolar" placeholder="Dolares americanos($)">
+        <br>
+    </div>
+    <div class="contenedor">
+        <h1>Conversor dólares a euros</h1>
+        <input type="number" step="0.01" id="dolar1" placeholder="Dolares americanos($)">
+        <br>
+        <button onclick="conversor2()">=</button>
+        <br>
+        <input type="number"  step="0.01" id="euro1" placeholder="Euro(€)">
+        <br>
+    </div>
+    <script>
+function conversor1(){
+    let euro =  parseFloat(document.getElementById("euro").value);
+    let dolar = euro / 0.94;
+    document.getElementById("dolar").value = dolar;
+}
+function conversor2(){
+    let dolar1 =  parseFloat(document.getElementById("dolar1").value);
+    let euro1 = dolar1 * 0.94;
+    document.getElementById("euro1").value = euro1;
+}
+    </script>
+</body>
+</html>
