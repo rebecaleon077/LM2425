@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor IMC</title>
+</head>
+<body>
+    <div class="contenedor">
+    <h2>Calculadora IMC</h2>
+    <input type="text" id="masa" placeholder="Masa(kg)">
+    <input type="text" id="altura" placeholder="Altura(m)">
+    <button onclick="login()">IMC</button>
+    <div id="mensaje"></div>
+    </div>
+<script>
+    function login(){
+        let masa = parseFloat(document.getElementById("masa").value);
+        let altura = parseFloat(document.getElementById("altura").value);
+        if (isNaN(masa) || isNaN(altura)){
+            document.getElementById("mensaje").innerHTML = "Debes introducir valores numéricos"
+        }
+         else{
+            let imc = masa/altura**2;
+        document.getElementById("mensaje").innerHTML = imc;
+    }
+}
+</script>
+</body>
+</html>
