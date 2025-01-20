@@ -17,7 +17,7 @@
     function login(){
         let masa = parseFloat(document.getElementById("masa").value);
         let altura = parseFloat(document.getElementById("altura").value);
-        if (isNaN(masa) || isNaN(altura)){
+        if (isNaN(masa) || isNaN(altura)){ //isNaN significa "Not-a-Number"
             document.getElementById("mensaje").innerHTML = "Debes introducir valores numéricos"
         }
          else{
