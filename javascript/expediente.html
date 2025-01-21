@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .contenedor{
+            display: grid;
+            grid-template-columns: auto auto;
+            border: 1px solid pink;
+            max-width: 50vh;
+            padding: 10px;
+            border-radius: 20px;
+            gap: 10px;
+            background-color: #FBD6F1;
+            margin: 10px auto;
+        }
+        .caja1{
+            padding: 10px;
+            background-color: lightpink;
+            border-radius: 15px;
+
+        }
+        .caja2{
+            width: 0;
+        }
+        header{
+            background-color:palevioletred;
+            grid-column-start:2 span;
+            border-radius: 20px;
+        }
+        input{
+            height: 30px;
+            width: 50px;
+        }
+        .caja3{
+            padding: 10px;
+            background-color: pink;
+            border-radius: 15px; 
+        }
+        button{
+            border: none;
+            font-weight: bold;
+            background-color: darksalmon;
+            border-radius: 15px;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor">
+<header><h3>Calificaciones</h3></header>
+<div class="caja1">Base de datos</div>
+<div class="caja2"><input type="text" id="bd"></div>
+<div class="caja1">Digitalización</div>
+<div class="caja2"><input type="text" id="digitalizacion"></div>
+<div class="caja1">Redes</div>
+<div class="caja2"><input type="text" id="redes"></div>
+<div class="caja1">Lenguaje de marcas</div>
+<div class="caja2"><input type="text" id="lm"></div>
+<div class="caja1">Implantación de sistemas operativos</div>
+<div class="caja2"><input type="text" id="iso"></div>
+<div class="caja1">Fol</div>
+<div class="caja2"><input type="text" id="fol"></div>
+<div class="caja1">Fundamentosde hardware</div>
+<div class="caja2"><input type="text" id="fh"></div>
+<div class="caja1">Sostenibilidad</div>
+<div class="caja2"><input type="text" id="sostenibilidad"></div>
+</div>
+<div class="contenedor">
+    <div class="caja3"><button onclick="media()">Media aritmética</button></div>
+    <div class="caja2"><input type="text" id="media"></div>
+    <div class="caja3"><button onclick="numeromodulosaprobados()">Número de modulos aprobados</button></div>
+    <div class="caja2"><input type="text" id="aprobados"></div>
+    <div class="caja3"><button onclick="numeromodulossuspensos()">Número de modulos suspensos</button></div>
+    <div class="caja2"><input type="text" id="suspensos"></div>
+</div>
+<script>
+    function media(){
+        let bd = parseFloat(document.getElementById("bd").value);
+        let digitalizacion = parseFloat(document.getElementById("digitalizacion").value);
+        let redes = parseFloat(document.getElementById("redes").value);
+        let lm = parseFloat(document.getElementById("lm").value);
+        let iso = parseFloat(document.getElementById("iso").value);
+        let fol = parseFloat(document.getElementById("fol").value);
+        let fh = parseFloat(document.getElementById("fh").value);
+        let sostenibilidad = parseFloat(document.getElementById("sostenibilidad").value);
+        let mediaaritmetica = (bd+digitalizacion+redes+lm+iso+fol+fh+sostenibilidad)/8;
+        document.getElementById("media").value = mediaaritmetica.toFixed(2);
+  }
+
+</script>
+</body>
+</html>

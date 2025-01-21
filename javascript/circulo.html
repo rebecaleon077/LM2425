@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulo</title>
+</head>
+<body>
+    <h2>Calcula el área del circulo</h2>
+    <form id="circulo">
+    <label for="radio1">
+        <input type="text" id="radio1" placeholder="Radio(cm)" required>
+    </label>
+    <br>
+    <br>
+    <button type="button" onclick="AreaCirculo()">
+    Área circulo
+    </button>
+    </form>
+<p id="resultado"></p>
+<script>
+    function AreaCirculo(){
+        let radio = parseFloat(document.getElementById("radio1").value);
+        let pi = Math.PI;
+        let area = pi * Math.pow(radio,2);
+        if (isNaN(radio) || radio <=0){
+        document.getElementById("resultado").innerHTML ="Introduce valores válidos y mayor que 0" 
+        return;
+        }
+        document.getElementById("resultado").innerHTML = `El área del círculo es de ${area.toFixed(2)} cm². `
+    }
+</script>
+</body>
+</html>
