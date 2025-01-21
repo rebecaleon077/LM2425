@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajando con arrays</title>
+</head>
+<body>
+    <h1>Trabajando con arrays</h1>
+    <input type="text" id="entrada"> <!--Aquí el usuario va escribir algo-->
+    <p id="resultado"></p> <!--Aquí se mostrará el resultado-->
+    <button onclick="anadir()">Añade</button> <!--No se suele utilizar la ñ porque puede dar problemas-->
+    <button onclick="sustraer()">Sustrae</button>
+    <script>
+        let array = []; /*Para que se aplique en toda la función debe quedar fuera*/
+        function anadir(){
+            let entrada = document.getElementById("entrada").value;
+            let resultado = document.getElementById("resultado");
+            array.push(entrada);
+            resultado.innerHTML = array;
+        }
+        function sustraer(){
+            let resultado = document.getElementById("resultado");
+            array.pop();
+            resultado.innerHTML = array;
+        }
+    </script>
+</body>
+</html>
