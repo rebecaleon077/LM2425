@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanzar el dado</title>
+</head>
+<body>
+<h1>Lanza el dado<br></h1>
+<hr>
+<script>
+    //Lanzar el dado
+    //Convierte un número aleatorio en la cara de un dado
+    var semilla = 0;
+    var mayor = 0;
+    var entero = 0;
+    var final = 0;
+    var resultado = "";
+    semilla = Math.random() * 10;
+    mayor = semilla * 6;
+    entero = Math.floor(mayor);/*Devuelve el entero menor o igual a un número dado.
+     Ejemplo: de 4.7 devuelve 4*/
+    final = entero + 1;
+    resultado = "Semilla:" + semilla + "\n";
+    resultado += "Mayor:" + mayor + "\n";
+    resultado += "Entero:" + entero + "\n";
+    resultado += "Final:" + final + "\n";
+    alert(resultado);
+</script>
+</body>
+</html>

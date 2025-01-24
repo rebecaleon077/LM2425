@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta o baja</title>
+</head>
+<body>
+<h1>Alta o baja <br></h1>
+<hr>
+<h3>Pulse el botón recargar para ver otra temperatura</h3>
+<script>
+    // Alta o baja 
+    // Demuestra la estructura if / else
+    var temp = 0;
+    var tempPerfecta = 25;
+    temp = Math.floor(Math.random() * 40) + 1;
+    alert ("Hace " + temp + " grados fuera.")
+    if (temp < tempPerfecta){
+        alert("Coge un jersey!!");
+    } else{ /*Solo se ejecutará si la condición se evalua a falso (false).*/
+        /*Es decir que la temperatura sea mayor que la temperatura es mayor a la temperatura perfecta*/
+        alert("Coge una camiseta!!")
+    } // end if
+</script>
+</body>
+</html>

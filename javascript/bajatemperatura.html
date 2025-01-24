@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baja temperatura</title>
+</head>
+<body>
+<h1>Baja temperatura <br></h1>
+<hr>
+<h3>Pulse el botón recargar para ver otra temperatura</h3>
+<script>
+    // Baja temperatura 
+    // Demuestra el uso de la sentencia if
+var temp = 0;
+var tempPerfecta = 18;
+temp = Math .floor(Math.random() * 40) + 1;
+alert ("Hace " + temp + " grados fuera.");
+if (temp < tempPerfecta){ /*Si la temperatura es menor a la temperatura perfecta */
+    alert("Coge un jersey!!");
+} //end if
+</script>
+</body>
+</html>
