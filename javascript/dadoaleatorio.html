@@ -11,15 +11,56 @@
 <script>
 // Dado aleatorio
 // Demuestra la sentencia switch
-var lazamiento = 0;
+var lanzamiento = 0;
 var dado = "";
 lanzamiento = Math.floor(Math.random() * 6) + 1;
-switch (lazamiento){ /*La declaración switch en JavaScript es una forma conveniente y clara de manejar múltiples condiciones.
+switch (lanzamiento){ /*La declaración switch en JavaScript es una forma conveniente y clara de manejar múltiples condiciones.
      Es especialmente útil cuando tienes que comparar la misma variable o expresión con varios posibles. */
 case 1:
     dado = "|-------|\n";
     dado +="|       |\n";
-}
+    dado +="|   *   |\n";
+    dado +="|       |\n";
+    dado +="|-------|\n";
+break;
+case 2:
+    dado = "|-------|\n";
+    dado +="|   *   |\n";
+    dado +="|       |\n";
+    dado +="|   *   |\n";
+    dado +="|-------|\n";
+break;
+case 3:
+    dado = "|-------|\n";
+    dado +="|   *   |\n";
+    dado +="|   *   |\n";
+    dado +="|   *   |\n";
+    dado +="|-------|\n";
+break;
+case 4:
+    dado = "|-------|\n";
+    dado +="| *   * |\n";
+    dado +="|       |\n";
+    dado +="| *   * |\n";
+    dado +="|-------|\n";
+break;
+case 5:
+    dado = "|-------|\n";
+    dado +="| *   * |\n";
+    dado +="|   *   |\n";
+    dado +="| *   * |\n";
+    dado +="|-------|\n";
+break;
+case 6:
+    dado = "|-------|\n";
+    dado +="| *   * |\n";
+    dado +="| *   * |\n";
+    dado +="| *   * |\n";
+    dado +="|-------|\n";
+break;
+default: dado = "ERROR!"/*En la declaración switch se ejecutará un bloque de código si los demás no lo han hecho*/
+} // end switch
+alert(dado);
 </script>
 </body>
 </html>
