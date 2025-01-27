@@ -10,10 +10,26 @@
 <hr>
 <h3>Pulse el botón recargar para ver otra temperatura</h3>
 <script>
+    //Varias temperaturas 
+    //Demuestra la estructura if/else
     var temp = 0;
     temp = Math.floor(Math.random() * 40) + 1;
     alert ("Hace " + temp + "grados fuera.");
 
+    if (temp < 21){ /*Dentro del if donde la temperatura cuando sea menor cuando se cumpla la condición de menor de 21,
+         se puede cumplir otra que sea menor de 10*/
+        if (temp < 10){
+            alert("Coge una chaqueta!!");
+        } else{
+            alert("Coge un jersey!!");
+        }
+    } else{ /*Hay que poner un if ya que si no cogería todos los valores mayor o igual a 21*/
+        if (temp > 30){
+            alert("Coge una camiseta!!");       
+        } else {
+        alert/("Coge una camisa!!");
+    }
+    } 
 </script>
 </body>
 </html>
