@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reparte gastos </title>
+</head>
+<body>
+    <h1>Reparte gastos</h1>
+    <label for="numeroanadir">Introduce un número positivo: <input type="text" name="" id="numeroanadir"></label>
+    <button onclick="anadir()">Añadir</button>
+    <br>
+    <label for="numerodividir">Introduce un número entero positivo para dividir: <input type="text" name="" id="numerodividir"></label>
+    <button onclick="dividir()">Divide</button>
+    <p id="mensaje1"></p>
+    <p id="mensaje2"></p>
+    <p id="mensaje3"></p>
+    <script>
+         let array =[];
+       function anadir(){
+          let numero = parseInt(document.getElementById("numeroanadir").value);
+          if ( isNaN(numero) || numero < 0){
+            alert("Por favor, introduce un número entero positivo");
+          } else{
+          array.push(numero);
+        document.getElementById("mensaje1").innerHTML = "Elementos en el array [" + array + "]";
+        let totalgastos = numero; 
+        document.getElementById("mensaje2").innerHTML = "Total gastado: " + totalgastos;
+    }
+        }
+    function dividir(){
+        let numero1 = parseInt(document.getElementById("numerodividir").value);
+        if (isNaN(numero1) || numero1 < 0){
+            alert("Por favor, introduce un número entero positivo para dividir la cantidad");
+        } else{
+            document.getElementById("mensaje3").innerHTML = "Cada persona debe aportar:"
+        }
+    }
+    </script>
+</body>
+</html>

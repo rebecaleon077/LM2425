@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebajas</title>
+</head>
+<body>
+    <h1>Calculadora de rebajas</h1>
+    <input type="text" name="" id="numero" placeholder="Precio del artículo">
+    <br>
+    <input type="text" name="" id="porcentaje" placeholder="Descuento en porcentaje">
+    <br>
+    <button onclick="calcula()">Calcular</button>
+    <p id="mensaje"></p>
+    <script>
+        function calcula(){
+            let numero = parseFloat(document.getElementById("numero").value);
+            let porcentaje = parseFloat(document.getElementById("porcentaje").value);
+            if (isNaN(numero) || isNaN(porcentaje) || numero < 0 || porcentaje < 0){
+                document.getElementById("mensaje").innerHTML = "El precio con descuento es: Imposible de calcular. Introduce números positivos. ";
+            } else{
+                let rebaja = (100 - porcentaje)/100 * numero;
+                document.getElementById("mensaje").innerHTML = "El precio con descuento es: " + rebaja + " $";
+            } 
+        }
+    </script>
+</body>
+</html>

@@ -23,10 +23,10 @@
     </form>
     <script>
         function calcular_factorial(){
-            event.preventDefault();
+            event.preventDefault(); //Sirve para evitar un evento en el navegador
             let numero = document.getElementById("numero").value;
             let factorial = 1;
-            for(let i = 1; i<=numero; i++){
+            for(let i = 1; i<=numero; i++){ //
                 factorial *= i; // factorial * i
             }
             document.getElementById("resultado").innerHTML = `El valor de ${numero}! es igual a ${factorial}`;
