@@ -92,7 +92,63 @@
         let mediaaritmetica = (bd+digitalizacion+redes+lm+iso+fol+fh+sostenibilidad)/8;
         document.getElementById("media").value = mediaaritmetica.toFixed(2);
   }
-
+  function numeromodulosaprobadosysuspensos(){
+ var aprobado = 0;
+ var suspenso = 0;
+ var bd = parseFloat(document.getElementById("bd").value);
+        var digitalizacion = parseFloat(document.getElementById("digitalizacion").value);
+        var redes = parseFloat(document.getElementById("redes").value);
+        var lm = parseFloat(document.getElementById("lm").value);
+        var iso = parseFloat(document.getElementById("iso").value);
+        var fol = parseFloat(document.getElementById("fol").value);
+        var fh = parseFloat(document.getElementById("fh").value);
+        var sostenibilidad = parseFloat(document.getElementById("sostenibilidad").value);
+ if (isNaN(bd) || isNaN(digitalizacion) || isNaN(redes) || isNaN(lm) || isNaN(iso) || isNaN(fol) || isNaN(fh) || isNaN(sostenibilidad)){
+    alert("Por favor, introduzca correctamente sus notas");
+ } else {
+if (bd>5){
+    aprobado++;
+} else{
+    suspenso++;
+}
+if (digitalizacion>5){
+    aprobado++;
+} else{
+    suspenso++;
+}
+if (redes>5){
+    aprobado++;
+} else{
+    suspenso++;
+}
+if (lm>5){
+    aprobado++;
+} else{
+    suspenso++;
+}
+if (iso>5){
+    aprobado++;
+} else{
+    suspenso++;
+}
+if (fol>5){
+    aprobado++;
+} else{
+    suspenso++;
+}if (fh>5){
+    aprobado++;
+} else{
+    suspenso++;
+}
+if (sostenibilidad>5){
+    aprobado++;
+} else{
+    suspenso++;
+}
+ }
+ 
+    }
+ 
 </script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Array</title>
+</head>
+<body>
+    <h2>Manipulación de Array</h2>
+    <form>
+        <label for="numero">Introduce un número:</label>
+        <input type="text" id="numero">
+        <button onclick="anadir(event)">Añadir Elemento</button>
+        <button onclick="eliminar(event)">Eliminar Elemento</button>
+        <button onclick="ordenarAsc(event)">Ordenar Ascendente</button>
+        <button onclick="ordenarDesc(event)">Ordenar Descendente</button>
+        <button onclick="buscar(event)">Buscar Elemento</button>
+    </form>
+    <p id="mostrar"></p>
+    <p id="resultado"></p>
+
+    <script>
+        let array = [];
+
+        function anadir(event) {
+            event.preventDefault();
+            let valorArray0 = document.getElementById("numero").value;
+            let valorArray1;
+            if(isNaN(valorArray0) || valorArray0 === ''){
+                alert('Por favor, ingresa un número');
+            } else {
+                valorArray1 = parseFloat(valorArray0.replace(',', '.'));
+                array.push(valorArray1);
+                mostrar();
+            }
+        }
+
+        function eliminar(event) {
+            event.preventDefault();
+            let valorArray0 = document.getElementById("numero").value;
+            let valorArray1;
+            if(isNaN(valorArray0) || valorArray0 === ''){
+                alert('Por favor, ingresa un número');
+            } else {
+                valorArray1 = parseFloat(valorArray0.replace(',', '.'));
+                const index = array.indexOf(valorArray1);
+                if(index !== -1) {
+                    array.splice(index, 1);
+                } else {
+                    alert('El número no se encuentra en el array');
+                }
+                mostrar();
+            }
+        }
+
+        function mostrar() {
+            if(array.length === 0){
+                document.getElementById("mostrar").innerHTML = 'El array está vacío.';
+            } else {
+                document.getElementById("mostrar").innerHTML = 'Array: ' + array.join(', ');
+            }
+        }
+
+        function ordenarAsc(event) {
+            event.preventDefault();
+            array.sort((a, b) => a - b);
+            mostrar();
+        }
+
+        function ordenarDesc(event) {
+            event.preventDefault();
+            array.sort((a, b) => b - a);
+            mostrar();
+        }
+
+        function buscar(event) {
+            event.preventDefault();
+            let valorArray0 = document.getElementById("numero").value;
+            let valorArray1;
+            if(isNaN(valorArray0) || valorArray0 === ''){
+                alert('Por favor, ingresa un número');
+            } else {
+                valorArray1 = parseFloat(valorArray0.replace(',', '.'));
+                const index = array.indexOf(valorArray1);
+                if(index !== -1) {
+                    document.getElementById("resultado").innerHTML = 'Elemento encontrado en la posición: ' + index;
+                } else {
+                    document.getElementById("resultado").innerHTML = 'Elemento no encontrado.';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

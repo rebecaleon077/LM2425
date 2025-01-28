@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de números</title>
+    <style>
+       label{
+        display: block;
+        margin-top: 40px;
+       }
+    </style>
+    <script src="../javascript/numeros.js"></script>
+</head>
+<body>
+    <h1>Gestor de números</h1>
+    <form action="#">
+        <label for="numero">Insertar número:</label>
+        <input type="text" name="numero" id="numero">
+        <p id="mostrar"></p>
+        <p id="media"></p>
+        <button type="submit" onclick="anadir(event)">Añadir número</button>
+        <button type="submit" onclick="mostrar(event)">Mostrar números</button>
+        <button type="button" onclick="suma()">Sumar números</button>
+        <button type="button" onclick="grande()">Número más grande</button>
+        <button id type="button" onclick="pequeno()">Número más pequeño</button>
+        <label for="posicion">Insertar número para saber su posición</label>
+        <input type="text" name="posicion" id="posicion">
+        <p id="pos"></p>
+        <button type="button" onclick="posicion_array()">Posición de un número</button>
+    </form>
+</body>
+</html>

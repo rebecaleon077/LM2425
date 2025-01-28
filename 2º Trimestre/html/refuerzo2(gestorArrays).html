@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Arrays</title>
+    <style>
+       p{
+        width: 600px;
+        height: 15px;
+       } 
+    </style>
+    <script src="../javascript/gestor.js"></script>
+</head>
+<body>
+    <h1>Gestor de Arrays</h1>
+    <form action="#">
+        <label for="numero">Insertar número:</label>
+        <input type="text" name="numero" id="numero">
+        <p id="mostrar"></p>
+        <p id="media"></p>
+        <button type="submit" onclick="anadir(event)">Añadir elemento</button>
+        <button type="submit" onclick="mostrarOrdenado(event)">Mostrar</button>
+        <button type="submit" onclick="mediaAritmetica(event)">Media aritmética</button>
+    </form>
+</body>
+</html>
