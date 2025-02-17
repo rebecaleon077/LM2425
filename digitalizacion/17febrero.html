@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Sortable - Display as grid</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+
+        div {
+            clear: left;
+        }
+
+        #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 450px;
+        }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: 1px;
+            float: left;
+            width: 300px;
+            height: 90px;
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+
+            $("#button").click(() => {
+                let orderArray = [];
+
+                $("#sortable li").each(function() {
+                    orderArray.push($(this).text().trim());
+                });
+
+                if(orderArray[0]=="Malware" && 
+                   orderArray[1]=="IoP" &&
+                   orderArray[2]=="Phising" &&
+                   orderArray[3]=="Ataques de denegación de servicios(DoS)" &&
+                   orderArray[4]=="Fallos en la autentificación y contraseñas débiles" &&
+                   orderArray[5]=="Violaciones de datos" &&
+                   orderArray[6]=="Monitorero no autorizado" &&
+                   orderArray[7]=="Hacker" &&
+                   orderArray[8]=="Ciberdelicuente" &&
+                   orderArray[9]=="Dark web" &&
+                   orderArray[10]=="Motores de búsqueda")
+                {
+                    $("#resultado").html("<strong>CORRECTO - </strong>");
+                }
+                else
+                {
+                    $("#resultado").text("ERROR - ");
+                }
+
+                $("#resultado").append(orderArray.join(", "));
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Los riesgos en las tecnologías y la ciberdelincuencia</h1>
+
+    <div>
+        <h1>Definiciones</h1>
+
+        <h3>1. Software malicioso diseñado para añar, acceder o tomar el control de sistemas informáticos.</h3>
+        <h3>2. Nuevo concepto que alude a la posibilidad de que los dispositivos electrónicos realicen compras sin mediación humana.</h3>
+        <h3>3. Intentos de engañar a usuarios para obtener información confidencial.</h3>
+        <h3>4. Enviar a un servidos muchas solicitudes, de manera que se sobrecarga el sistema o la red y deja de funcionar correctamente.</h3>
+        <h3>5. Acceso no autorizado debido a sistemas de autentificación débiles p contraseñas fáciles de adivinar.</h3>
+        <h3>6. Acceso no autorizado a la información personal o sensible.</h3>
+        <h3>7. Recopilación de datos sin el consentimiento del usuario.</h3>
+        <h3>8. Es una persona con grandes habilidades en el manejo de computadoras que investiga un sistema informático pra avisar de fallos desarollar técnicas de mejora.</h3>
+        <h3>9. Es una persona que utiliza sus habilidades informáticas pra cometer delitos.</h3>
+        <h3>10. Es una parte de internet que se halla intencionalmente oculta a los motores de búsquesda, con direcciones IP enmascaradas y accesibles solo con unavegador web especial.</h3>
+
+    </div>
+
+    <div>
+        <button id="button">Haz clic aquí para comprobar el resultado</button>
+    </div>
+
+    <div>
+        <p id="resultado"></p>
+    </div>
+
+    <div>
+        <ul id="sortable">
+            <li class="ui-state-default">IoP</li>
+            <li class="ui-state-default">Malware</li>
+            <li class="ui-state-default">Motores de búsqueda</li>
+            <li class="ui-state-default">Dark web</li>
+            <li class="ui-state-default">Monitorero no autorizado</li>
+            <li class="ui-state-default">Ataques  de denegación de servicios(DoS)</li>
+            <li class="ui-state-default">Ciberdelicuente</li>
+            <li class="ui-state-default">Hacker</li>
+            <li class="ui-state-default">Phising</li>
+            <li class="ui-state-default">Fallos en la autentificación y contraseñas débiles</li>
+            <li class="ui-state-default">Violaciones de datos</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
