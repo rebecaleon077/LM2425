@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precio con propina</title>
+</head>
+<body>
+    <form action="">
+        <label for="propina">Propina:</label>
+        <input type="text" name="" id="dinero">
+        <br>
+        <button type="button" onclick="sinpropina()">Sin propina</button>
+        <button type="button" onclick="propina5porciento()">Propina 5%</button>
+        <button type="button" onclick="propina10porciento()">Propina 10%</button>
+        <button type="button" onclick="propina15porciento()">Propina 15%</button>
+        <p id="resultado"></p>
+    </form>
+    <script>
+        function sinpropina(){
+            var dinero = document.getElementById("dinero").value;
+            if (isNaN(dinero) || dinero <= 0) {
+        document.getElementById('resultado').innerHTML = "Por favor, introduce valores válidos y mayores a 0.";
+        }else{
+            var dinero1 = parseFloat(dinero);
+            document.getElementById("resultado").innerHTML='Debe pagar ' + dinero1 + '$ sin propina.';
+        }
+        }
+        function propina5porciento(){
+            var dinero = document.getElementById("dinero").value;
+            if (isNaN(dinero) || dinero <= 0) {
+        document.getElementById('resultado').innerHTML = "Por favor, introduce valores válidos y mayores a 0.";
+        } else{
+         var dinero1= parseFloat(dinero);
+         var propina5= dinero1 * 5/100;
+        document.getElementById("resultado").innerHTML='Debe pagar '+ dinero1 + '$ con una propina de ' + propina5 +'$.'
+    }
+}
+    function propina10porciento(){
+            var dinero = document.getElementById("dinero").value;
+            if (isNaN(dinero) || dinero <= 0) {
+        document.getElementById('resultado').innerHTML = "Por favor, introduce valores válidos y mayores a 0."; 
+        } else{
+        var dinero1 = parseFloat(dinero);
+        var propina10= dinero1 * 10/100;
+        document.getElementById("resultado").innerHTML='Debe pagar '+ dinero1 + '$ con una propina de ' + propina10 +'$.';
+    }
+}
+    function propina15porciento(){
+            var dinero = document.getElementById("dinero").value;
+            if (isNaN(dinero) || dinero <= 0) {
+        document.getElementById('resultado').innerHTML = "Por favor, introduce valores válidos y mayores a 0.";
+        } else{
+        var dinero1 = parseFloat(dinero);
+        var propina15= dinero1 * 15/100;
+        document.getElementById("resultado").innerHTML='Debe pagar '+ dinero1 + '$ con una propina de ' + propina15 +'$.'
+    }
+}
+
+    </script>
+</body>
+</html>
