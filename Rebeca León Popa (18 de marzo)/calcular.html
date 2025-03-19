@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descuento</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input, button { padding: 10px; margin: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+    <h1>🛍️ Calculadora de Descuento</h1>
+    
+    <label for="precio">Ingrese el precio del producto (€):</label>
+    <input type="number" id="precio" placeholder="Ej: 120">
+    <button onclick="calcular()">Calcular Descuento</button>
+    
+    <h2 id="resultado"></h2>
+
+    <script>
+        // Definición de la función para calcular el descuento
+        function calcularDescuento(precioOriginal) {
+            let descuento;
+
+            // Completa la condición que aplica el descuento
+            if(precioOriginal > 100) { // Si el precio es mayor a 100
+                descuento = precioOriginal * 0.15; // 15% de descuento
+            } else {
+                descuento = precioOriginal * 0.05; // 5% de descuento
+            }
+
+            // Completa la fórmula para calcular el precio con descuento
+            let precioFinal = precioOriginal - descuento; 
+
+            // Devolver el precio final con el descuento aplicado
+            return precioFinal;
+        }
+
+        function calcular(){
+            // Obtener el precio ingresado por el usuario
+            let precio = document.getElementById("precio").value;
+
+            // Validar que el usuario haya ingresado un número válido
+            if (isNaN(precio) || precio <= 0) {
+                document.getElementById("resultado").innerText = "⚠️ Ingrese un precio válido.";
+                return;
+            }
+
+            // Llamar a la función calcularDescuento y mostrar el resultado
+            let precioConDescuento = calcularDescuento(precio);
+            document.getElementById("resultado").innerText = 
+                "💲 Precio final con descuento: " + precioConDescuento.toFixed(2) + " euros.";
+        }
+    </script>
+
+</body>
+</html>

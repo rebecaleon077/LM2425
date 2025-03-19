@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title> Gestión de Entradas para el concierto</title>
+</head>
+<body>
+    <form action="">
+        <h2> ​🎶​Gestión de Entradas para el Concierto ​🎶​</h2>
+        <input type="text" id="nombres" placeholder="Ingrese un nombre">
+        <button type="button" onclick="anadir()">Añadir asistente </button>
+        <button type="button" onclick="eliminar()">Eliminar Último</button>
+        <button type="button" onclick="eliminarpornombre()">Eliminar por Nombre</button>
+        <button type="button" onclick="buscar()">Buscar Asistente</button>
+        <h3>Lista de asistentes:</h3>
+        <p id="lista" ></p>
+    </form>
+    <script>
+    var array = [];
+    function anadir(){
+        var asistentes = document.getElementById("nombres").value;
+        if(!isNaN(asistentes) || asistentes == ''){
+            document.getElementById("lista").innerHTML = 'No es una cadena de texto';
+        } else {
+            array.push(asistentes);
+            document.getElementById("lista").innerHTML = array;
+        }
+    }
+    function eliminar(){
+        if(array.length>0){
+            array.pop();
+            document.getElementById("lista").innerHTML = array;
+        } else{
+            document.getElementById("lista").innerHTML = 'Añade nombres de asistentes';
+        }
+    }
+    function eliminarpornombre(){
+        var nombre = document.getElementById("nombres").value;
+        var indice = array.indexOf(nombre);
+        if (indice !== -1){
+            array.splice(indice, 1);
+        } else {
+            document.getElementById("lista").innerHTML='No existe el nombre que quieres eliminar';
+        }
+    }
+        function buscar(){
+            var buscar = document.getElementById("nombres").value;
+            if(array.includes(buscar)){
+                document.getElementById("lista").innerHTML = 'No existe asistente';
+            }else{
+                document.getElementById("lista").innerHTML = 'Hay asistentes en la lista'
+            }
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de calificación</title>
+</head>
+<body>
+<form action="">
+    <label for="cajatexto">Ingrese su calificación(0-10):</label>
+    <br>
+    <input type="text" id="cajatexto">
+    <br>
+    <button type="button" onclick="evaluar()">Evaluar</button>
+    <p id="mensaje"></p>
+</form>
+<script>
+    function evaluar(){
+        var calificacion = document.getElementById("cajatexto").value;
+        if(isNaN(calificacion) || calificacion < 0 || calificacion > 10){
+            document.getElementById("mensaje").innerHTML = '❌​ Error: Ingrese un número válido entre 0 y 10';
+        } else if(calificacion < 2.9){
+            var calificacion1 = parseFloat(calificacion);
+            document.getElementById("mensaje").innerHTML = '**❌ ​Muy deficiente**';
+        } else if(calificacion < 4.9){
+            var calificacion1 = parseFloat(calificacion);
+            document.getElementById("mensaje").innerHTML = '​**⚠️​ Insuficiente**';
+        } else if(calificacion < 5.9){
+            var calificacion1 = parseFloat(calificacion);
+            document.getElementById("mensaje").innerHTML = '​**✔️​ Aprobado**';
+        } else if(calificacion < 6.9){
+            var calificacion1 = parseFloat(calificacion);
+            document.getElementById("mensaje").innerHTML = '​**👍 Bien **';
+        } else if(calificacion < 8.9){
+            var calificacion1 = parseFloat(calificacion);            
+            document.getElementById("mensaje").innerHTML = '​**✅​ Notable**';
+        } else {
+            var calificacion1 = parseFloat(calificacion);            
+            document.getElementById("mensaje").innerHTML = '**⭐​Sobresaliente**';       
+        }
+    }
+</script>
+</body>
+</html>
