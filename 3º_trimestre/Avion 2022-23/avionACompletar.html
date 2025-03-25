@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mueve el avión</title>
+    <style media="screen">
+      body {
+        background-image: url('cielo.png');
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body onkeydown="gestionarTecla(event)">
+    <h1 id="mensaje">Mueve el avión con las flechas</h1>
+    <img id="avion" src="avion.png" alt="Sprite del avion"/>
+    <script>
+    	var objImage= null; //Se usa null para indicar que la variable está intencionadamente vacía o que aún no apunta a ningún objeto.
+    	function iniciar(){
+    			objImage =document.getElementById("avion"); /* Obtenemos el objeto que representa el avion */ 
+				/*Las imágenes no tienen .value */
+    			objImage.style.position='relative';
+    			objImage.style.left='1000px';
+    			objImage.style.top='300px';
+    	}
+    	function gestionarTecla(e){
+    		var codigo = e.which||e.keyCode; 
+			/*Se usa en JavaScript para obtener el código de la tecla que ha sido presionada en un evento de teclado (keydown, keypress, o keyup).
+			Desglose detallado:
+			e → Es el objeto del evento(e de evento) que se pasa a la función del evento de teclado.
+			e.which → Es una propiedad que devuelve el código de la tecla presionada. Se usaba en navegadores más modernos antes de e.keyCode.
+			e.keyCode → Es una propiedad más antigua que también devuelve el código de la tecla presionada. Se usaba en versiones antiguas de Internet Explorer.
+			|| (operador OR) → Se usa para proporcionar compatibilidad entre navegadores. Si e.which no está definido (es undefined o null), se usa e.keyCode.*/
+            /* Todas las teclas tienen un código numérico
+            que podemos consultar en https://keycode.info/ */
+    		switch(codigo)
+            {
+    		    case 37: //Flecha izquierda
+						moverIzquierda();
+    					break;
+    			case 38: //Flecha arriba
+    					moverArriba();
+    					break;
+    			case 39: //Flecha derecha
+    					moverDerecha();
+    					break;
+    			case 40: //Flecha abajo
+    					moverAbajo();
+    					break;
+    			}
+    		}
+    	function moverIzquierda(){
+    		objImage.style.left=parseInt(objImage.style.left)-10 +'px';
+        document.getElementById('mensaje').innerHTML = "Izquierda";
+    	}
+	    /*→ objImage.style.left
+		Obtiene el valor actual de la propiedad CSS left de objImage.
+		style.left funciona solo si el elemento tiene una posición definida en CSS (relative, absolute o fixed).
+		Se usa para mover elementos horizontalmente en píxeles (px) dentro del documento.
+		Este valor es un string con una unidad de medida ("100px", "200px", etc.).
+		→ parseInt(objImage.style.left)
+		Convierte ese valor a un número entero eliminando la unidad "px".
+		Por ejemplo, si style.left vale "100px", parseInt("100px") devuelve 100.
+		→ - 10
+		Resta 10 al valor numérico actual para mover la imagen 10 píxeles a la izquierda.
+		→ + 'px'
+		Se concatena 'px' al resultado para volver a formar un valor válido de CSS.
+		*/
+    	function moverArriba(){
+    	  	objImage.style.top=parseInt(objImage.style.top)-10 +'px';/*Por el contrario el style top sirve para moverlo verticalmente.*/
+        	document.getElementById('mensaje').innerHTML = "Arriba";
+    	}
+    	function moverDerecha(){
+    	   objImage.style.left=parseInt(objImage.style.left)+10 +'px';
+         document.getElementById('mensaje').innerHTML = "Derecha";
+    	}
+    	function moverAbajo(){
+    	    objImage.style.top= parseInt(objImage.style.top)+10 +'px';
+         document.getElementById('mensaje').innerHTML = "Abajo";
+    	}
+    	window.onload = iniciar; /* Se ejecutará al cargar la página */
+		/*window.onload es un evento en JavaScript que se ejecuta cuando todos los elementos de la página han sido completamente cargados, incluyendo imágenes, scripts y estilos CSS.*/
+</script>
+
+  </body>
+</html>

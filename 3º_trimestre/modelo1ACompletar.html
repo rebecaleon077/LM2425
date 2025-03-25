@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IES Isbilya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ <table border="0" cellpadding="0">
+     <h1>IES Isbilya</h1>
+  <tr>
+    <td width="100%"><img src="s1.jpg" id="fotoActual"></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <form>
+      <div align="center">
+          
+          
+          <input type="button" value="Atrás" onClick="atras()">
+          <input type="button" value="Siguiente" onClick="siguiente()">
+          <br>
+      
+        </div>
+    </form>
+    </td>
+  </tr>
+</table>  
+          <script>
+            var fotos=new Array();
+            /*new Array(): Aquí estás creando una nueva instancia de un array vacío. Es decir, fotos comienza siendo un array sin ningún elemento.*/
+            var indice=0; /* Inicializamos el indice del Array */
+            /*Para inicializar se tiene que poner un 0, es decir sería [var indice=0;]
+            lo que significa que comenzaremos con la primera foto (fotos[0]).*/
+            var totalFotos;
+            /*totalFotos es una variable que servirá para almacenar la longitud del array, que en este caso es el número total de fotos. 
+            Esto se calcula dinámicamente en la función siguiente con fotos.length.*/
+            fotos[0]="s0.jpg";
+            fotos[1]="s1.jpg";
+            fotos[2]="s2.jpg";
+            fotos[3]="s3.jpg";
+            fotos[4]="s4.jpg";
+            /*A cada posición del array (índice 0, 1, 2, etc.) le asignamos un nombre de archivo que representa una imagen, como "s0.jpg".
+            Ahora el array fotos tiene un total de cinco elementos:
+            ["s0.jpg", "s1.jpg", "s2.jpg", "s3.jpg", "s4.jpg"]
+            */
+            function atras(){
+                if (indice==0) { /* Si era la primera foto... */
+                  indice= fotos.length - 1; 
+                }
+                else
+                {
+                indice =indice -1;
+                }
+                document.getElementById("fotoActual").src = "s"+indice+".jpg";
+            }
+            /*[if (indice==0)]
+            Este bloque verifica si indice tiene un valor igual a 0.
+            Aquí, fotos.length representa el número total de fotos en el arreglo fotos, y al restarle 1 obtenemos el índice de la última foto (ya que los índices en JavaScript son base 0).
+            En este caso, simplemente se decrementa el valor del índice para pasar a la foto anterior:
+            indice = indice - 1;
+            Esto mueve el índice una posición atrás en el arreglo.
+            Cambio del atributo src:
+            Finalmente, el atributo src del elemento HTML con el id fotoActual se actualiza con el nombre de la foto correspondiente ("s" + indice + ".jpg").
+            */
+            function siguiente(){
+                totalFotos = fotos.length;
+                if (indice==totalFotos-1){
+                    indice=0 ; /* Empezamos de nuevo */
+                }
+                else
+                {
+                    indice=indice+1;        
+                }
+                document.getElementById("fotoActual").src = "s"+indice+".jpg"; /* Ponemos el nombre del fichero */
+            }
+</script>
+        
+</body>
+</html>
