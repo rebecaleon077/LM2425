@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 localStorage</title>
+</head>
+<body>
+  <!--Ejercicio 3: Lista de Tareas
+Objetivo: Crea una página para una aplicación de lista de tareas que permita al
+usuario añadir tareas a una lista, mostrando cada tarea en un elemento <li> dentro
+de un <ul>. Guarda las tareas en localStorage y asegúrate de que permanezcan en
+la lista cuando la página se recargue.
+Especificaciones:
+
+● Incluye una caja de texto para que el usuario escriba la tarea y un botón para
+añadirla a la lista.
+● Al hacer clic en el botón, la tarea se debe agregar a la lista y a localStorage.
+● Al cargar la página, recupera y muestra las tareas guardadas de
+localStorage.
+● Asegúrate de que el usuario pueda añadir múltiples tareas y que todas se
+guarden correctamente.-->
+<h1>Lista de tareas</h1>
+<input type="text" id="entrada" placeholder="Escribe una tarea">
+<button type="button" onclick="anadir()">Añadir</button>
+<ul id="lista"></ul>
+<script>
+  let arraytareas = [];
+  function anadir(){
+    let entrada = document.getElementById("entrada").value;
+    if (entrada !=""){
+      localStorage.setItem("tareas",JSON.stringify(arraytareas));
+      arraytareas.push(entrada);
+      document.getElementById("entrada").value="";
+      mostrartareas();
+    }
+  }
+  function mostrartareas(){
+    let lista = document.getElementById("lista");
+    lista.innerHTML = "";
+    arraytareas.forEach(tarea =>{
+      let li = document.createElement("li");
+      li.textContent = tarea;
+      lista.appendChild(li);
+    });
+  }
+  function cargarlistatarea(){
+    let tareasguardadas = JSON.parse(localStorage.getItem("tareas"));
+    if (tareasguardadas){
+      arraytareas = tareasguardadas;
+      mostrartareas();
+    }
+  }
+  window.onload = cargarlistatarea;
+</script>
+</body>
+</html>

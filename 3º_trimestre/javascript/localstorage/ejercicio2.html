@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio localStorage</title>
+</head>
+<body>
+    <!--Ejercicio 2: Cambio de Tema
+Objetivo: Desarrolla una página que permita al usuario elegir entre un tema claro y
+oscuro para la página. Usa dos botones para permitir la selección del tema. Guarda
+la selección en localStorage y asegúrate de que la selección persista entre
+recargas de página.
+Especificaciones:
+● Implementa dos botones, uno para cada tema.
+● Usa localStorage para guardar el tema seleccionado por el usuario.
+● Al cargar la página, lee el tema guardado en localStorage y aplica el tema
+correspondiente automáticamente.
+● Proporciona feedback visual inmediato cuando se cambia el tema.-->
+<h1>Cambio de tema</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quibusdam consequuntur reprehenderit aliquam dolorum porro vel, assumenda quam inventore esse cupiditate ratione quo sint, temporibus pariatur. Hic cumque atque distinctio.</p>
+<button type="button" onclick="cambiartema('oscuro')">Tema oscuro</button>
+<button type="button" onclick="cambiartema('claro')">Tema claro</button>
+<script>
+    function cambiartema(tema){
+        if (tema === 'oscuro'){
+            document.body.style.background='black';
+            document.body.style.color='white';
+        } else {
+            document.body.style.background='white';
+            document.body.style.color='black';
+        }
+        localStorage.setItem('tema', tema);
+    }
+    function cargartema(){
+        const temaguardado = localStorage.getItem('tema');
+        if (temaguardado){
+            cambiartema(temaguardado);
+        }
+    }
+    window.onload = cargartema;
+</script>
+</body>
+</html>
