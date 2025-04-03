@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 localStorage</title>
+</head>
+<body>
+    <!--Ejercicio 5: Configuración de Usuario Personalizable
+Objetivo: Crea una página que permita al usuario guardar una configuración
+personalizable, como el tamaño de fuente y el color de fondo de la página.
+Proporciona formularios para ajustar estas configuraciones, guarda los cambios en
+localStorage y aplica automáticamente estas preferencias cada vez que el usuario
+visita la página.
+Especificaciones:
+● Implementa controles de usuario (como cajas de selección o deslizadores)
+para ajustar el tamaño de fuente y el color de fondo.
+● Usa localStorage para guardar las preferencias del usuario.
+● Al cargar la página, lee las preferencias guardadas y aplica los ajustes
+automáticamente.
+● Incluye una opción para restablecer la configuración a los valores
+predeterminados.-->
+<h1>Configuracion por el usuario</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione architecto incidunt fuga quis mollitia repudiandae excepturi cupiditate optio, asperiores in eos explicabo perspiciatis odit natus dolorem commodi, molestiae aliquam dolorum?</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea explicabo ut, impedit quod laudantium assumenda quaerat inventore asperiores laboriosam eum qui quibusdam veritatis nihil placeat distinctio doloremque, odio vel magni!</p>
+<input type="text" id="tamano_de_fuente" placeholder="Tamaño de fuente">
+<button type="button" onclick="tamano_fuente()">Establecer</button>
+<br>
+<input type="text" id="color_de_fondo" placeholder="Color de fondo">
+<button type="button" onclick="color_fondo()">Establecer</button>
+<br>
+<button type="button" onclick="restablecer()">Restablecer</button>
+<script>
+    function tamano_fuente(){
+        let fontsize = document.getElementById("tamano_de_fuente").value;
+        localStorage.setItem("fontsize", fontsize);
+        aplicarconfiguracion();
+    }
+    function color_fondo(){
+        let bgcolor = document.getElementById("color_de_fondo").value;
+        localStorage.setItem("bgcolor", bgcolor);
+        aplicarconfiguracion();
+    }
+    function aplicarconfiguracion(){
+        let guardarfontsize = localStorage.getItem("fontsize") || "16";
+        let guardarbgcolor = localStorage.getItem("bgcolor") || "#ffffff";
+        document.body.style.fontSize = guardarfontsize + "px";
+        document.body.style.backgroundColor = guardarbgcolor;
+    }
+    function restablecer(){
+        localStorage.removeItem("fontsize");
+        localStorage.removeItem("bgcolor");
+        aplicarconfiguracion();
+    }
+    window.onload = aplicarconfiguracion;
+</script>
+</body>
+</html>

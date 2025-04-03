@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 localStorage</title>
+</head>
+<body>
+    <!--Ejercicio 1: Guardar y Mostrar Nombre de Usuario
+Objetivo: Crea una página web con un formulario que contenga una caja de texto y
+un botón. El usuario debe poder introducir su nombre en la caja de texto, y al hacer
+clic en el botón, el nombre se guardará en localStorage. Debajo del formulario,
+muestra el nombre guardado cada vez que se recarga la página.
+Especificaciones:
+● Utiliza document.getElementById() para obtener los valores del formulario.
+● Guarda el nombre de usuario en localStorage cuando el usuario haga clic en
+el botón.
+● Al cargar la página, comprueba si ya existe un nombre de usuario guardado
+en localStorage y muéstralo debajo del formulario.
+● Asegúrate de incluir instrucciones claras en la página para el usuario.-->
+<h1>Guardar y Mostrar Nombre de Usuario</h1>
+<input type="text" name="" id="nombre_usuario" placeholder="Introduce tu nombre">
+<br>
+<button type="button" onclick="guardar_nombre()">Guardar</button>
+<p id="mensaje"></p>
+<script>
+    function guardar_nombre(){
+        let nombre = document.getElementById("nombre_usuario").value;
+        localStorage.setItem("nombre", nombre);
+        cargar_nombre();
+    }
+    function cargar_nombre(){
+        let nombre_usuario = localStorage.getItem("nombre");
+        if (nombre_usuario != null){
+            document.getElementById("mensaje").innerHTML = nombre_usuario;
+        } else{
+            document.getElementById("mensaje").innerHTML = "No has insertado ningún nombre";
+        }
+    }
+    window.onload = cargar_nombre;
+</script>
+</body>
+</html>
