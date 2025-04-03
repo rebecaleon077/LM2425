@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 localStorage</title>
+</head>
+<body>
+    <!--Ejercicio 4: Eliminar Tareas
+Objetivo: Amplía el ejercicio anterior de la lista de tareas añadiendo la capacidad de
+eliminar tareas individuales de la lista y de localStorage.
+Especificaciones:
+● Añade un botón de eliminar a cada tarea de la lista.
+● Al hacer clic en el botón de eliminar, la tarea correspondiente debe ser
+eliminada de la página y de localStorage.
+● Asegúrate de que la funcionalidad de eliminación funcione correctamente
+incluso después de recargar la página.-->
+<h1>Lista de tareas</h1>
+<input type="text" id="entrada" placeholder="Escribe una tarea">
+<button type="button" onclick="anadir()">Añadir</button>
+<button type="button" onclick="eliminar()">eliminar</button>
+<ul id="lista"></ul>
+<script>
+  let arraytareas = [];
+  function anadir(){
+    let entrada = document.getElementById("entrada").value;
+    if (entrada !=""){
+      localStorage.setItem("tareas",JSON.stringify(arraytareas));
+      arraytareas.push(entrada);
+      document.getElementById("entrada").value="";
+      mostrartareas();
+    }
+  }
+  function eliminar(posicion){
+    arraytareas.splice(posicion, 1);// Eliminar tarea del array en posición 1
+    localStorage.setItem("tareas",JSON.stringify(arraytareas));
+    mostrartareas();
+  }
+  function mostrartareas(){
+    let lista = document.getElementById("lista");
+    lista.innerHTML = "";
+    arraytareas.forEach(tarea =>{
+      let li = document.createElement("li");
+      li.textContent = tarea;
+      lista.appendChild(li);
+    });
+  }
+  function cargarlistatarea(){
+    let tareasguardadas = JSON.parse(localStorage.getItem("tareas"));
+    if (tareasguardadas){
+      arraytareas = tareasguardadas;
+      mostrartareas();
+    }
+  }
+  window.onload = cargarlistatarea;
+  </script>
+</body>
+</html>
