@@ -32,7 +32,7 @@ incluso después de recargar la página.-->
     }
   }
   function eliminar(posicion){
-    arraytareas.splice(posicion, 1);// Eliminar tarea del array en posición 1
+    arraytareas.splice(posicion, 1);// (posicion de las tareas, número de tareas a eliminar)
     localStorage.setItem("tareas",JSON.stringify(arraytareas));
     mostrartareas();
   }
