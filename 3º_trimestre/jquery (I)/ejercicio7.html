@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<!--Define una función en jQuery que permita decirnos por consola si un elemento
+HTML existe o no.-->
+<h1>Este encabezado es de nivel 1</h1>
+<p>Párrafo 2. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat sequi hic laborum facere dolorem aut, voluptate corrupti mollitia accusantium sunt maiores repudiandae sint, reiciendis odio tempore earum facilis amet consequatur?</p>
+<p>Párrafo 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veritatis nesciunt voluptatum cum aliquid eius aspernatur porro, deleniti explicabo nostrum error ipsum vero aperiam eum iste repudiandae laudantium expedita tenetur.</p>
+<img src="https://picsum.photos/200" alt="">
+<img src="https://picsum.photos/200" alt="">
+<img src="https://picsum.photos/200" alt="">
+<a href="https://www.google.comp"></a>
+<a href="https://www.google.comp"></a>
+<a href="https://www.google.comp"></a>
+<a href="https://www.google.comp"></a>
+<a href="https://www.google.comp"></a>
+<table border="1">
+    <tr>
+        <th>Nº H1</th>
+        <th>Nº P</th>
+        <th>Nº IMG</th>
+        <th>Nº A</th>
+    </tr>
+    <tr>
+        <td id="nh1"></td>
+        <td id="np"></td>
+        <td id="nimg"></td>
+        <td id="na"></td>
+    </tr>
+</table>
+<script>
+    function elementoExiste (selector){ //El selector se usa para llamar las diferentes etiquetas. En caso de querer usar la función que ponerlo de la siguiente manera:
+        // elementoExiste ("nombre_etiqueta"). Si pongo el nombre sin las comillas o pongo también el "function" no funcionará 
+    if ($(selector).length>0){
+        console.log("El elemento que estas buscando existe");
+    } else{
+        console.log("El elemento no existe")
+    }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<!--Podemos manipular varias propiedades CSS al mismo tiempo. Introducir cambios en
+el código anterior para cambiar también los colores de los elementos.-->
+<h1 id="encabezado">Este es un encabezado nivel 1</h1>
+<p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit harum quasi hic. Tempora, reprehenderit. Quos dolores molestias esse animi tempora, consequatur voluptate id molestiae vitae maiores libero quas ducimus ex?</p>
+<p class="impar">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium ipsum sunt dicta error illo beatae accusamus pariatur provident in nemo, aperiam cumque recusandae eius fugiat labore est ea, obcaecati magnam.</p>
+<p class="par">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga delectus saepe ipsum iure eius at optio perferendis eaque deleniti, quisquam tempora unde maxime libero aperiam maiores veniam fugit quibusdam error?</p>
+<button id="masgrande">Más Grande</button>
+<button id="menosgrande">Menos Grande</button>
+<script>
+    $ (document).ready(function(){
+        $("#menosgrande").click(function(){
+            $("#encabezado").css("font-size", "0.8em");
+            $(".par").css("font-size", "0.8em");
+            $("#encabezado").css("color", "red");
+            $(".par").css("color", "pink");
+        });
+        // $("#encabezado").css("font-size":"o.8em", "color":"red");
+        // $(".par").css("font-size":"o.8em", "color":"pink");
+        $("#masgrande").click(function(){
+            $("#ecabezado").css("font-size", "2em");
+            $(".par").css("font-size", "2em");
+            $("#encabezado").css("color", "purple");
+            $(".par").css("color", "blue");
+        });
+    });
+</script>
+</body>
+</html>

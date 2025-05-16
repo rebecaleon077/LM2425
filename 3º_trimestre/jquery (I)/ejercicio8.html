@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<!--Para ilustrar el funcionamiento del método attr de jQuery crea una web con un par de
+botones “Obtener scr de la imagen”, “Obtener html del encabezado”, “Obtener
+html de un párrafo” que al hacer clic sobre ellos permita visualizar mediante un alert
+de JavaScript los valores correspondientes.-->
+    <h1>Ejemplo <span>de encabezado</span></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ullam tempore corporis, commodi ipsum, quam, tempora placeat iusto sequi nobis ipsa ad deleniti iste. Dolorem optio nobis error at fugiat.</p>
+    <img src="https://picsum.photos/200" alt="">
+    <button id="boton1">Mostrar encabezado</button>
+    <button id="boton2">Mostrar párrafo</button>
+    <button id="boton3">Mostrar imagen</button>
+    <script>
+        $(document).ready(function(){
+            $("#boton1").click(function(){
+                alert("Encabezado:"+ $("h1").html()); // Con este obtengo el código html h1
+            });
+            $("#boton2").click(function(){
+                alert("Párrafo:"+ $("p").html()); // Con este obtengo el texto el texto de un párrafo o un objeto
+            });
+            $("#boton3").click(function(){
+                alert("Imagen:"+ $("img").attr("src")); // Con attr se obtiene el src si pongo "src"
+            });
+        });
+    </script>
+</body>
+</html>

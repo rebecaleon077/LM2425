@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!--2. En base al ejercicio anterior vamos a identificar el encabezado mediante un id y los
+párrafos que ocupan una posición par pertenecerán a la clase “pares”. Realiza las
+modificaciones pertinentes para que los botones “Ocultar” y “Aparecer” utilicen los
+selectores convenientemente, para el encabezado su identificador y para los
+párrafos pares su clase de CSS.-->
+<h1 id="encabezado">Este es un encabezado nivel 1</h1>
+<p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit harum quasi hic. Tempora, reprehenderit. Quos dolores molestias esse animi tempora, consequatur voluptate id molestiae vitae maiores libero quas ducimus ex?</p>
+<p class="impar">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium ipsum sunt dicta error illo beatae accusamus pariatur provident in nemo, aperiam cumque recusandae eius fugiat labore est ea, obcaecati magnam.</p>
+<p class="par">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga delectus saepe ipsum iure eius at optio perferendis eaque deleniti, quisquam tempora unde maxime libero aperiam maiores veniam fugit quibusdam error?</p>
+<button id="aparecer">Aparecer</button>
+<button id="ocultar">Ocultar</button>
+<script>
+    $(document).ready(function (){
+        $("#aparecer").click(function(){
+            $("#encabezado").show();
+            $(".par").show();
+        });
+        $("#ocultar").click(function(){
+            $("#encabezado").hide();
+            $(".par").hide();
+        });
+    });
+</script>
+</body>
+</html>

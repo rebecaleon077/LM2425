@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericicio 12</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!--Modifica ligeramente el ejercicio anterior para que en lugar de vaciar literalmente el
+div simplemente visualice o no el texto en función de un botón, “Mostrar/Ocultar
+texto”. Utiliza algunas de las funciones de clases que tiene jQuery.-->
+    <div id="caja">Ejericicio número 12</div>
+    <button id="mostrar_ocultar">Mostrar/Ocultar</button>
+    <p id="resultado"></p>
+    <script>
+        $(document).ready(function(){
+            let textoCaja = $("#caja").text();
+            let textovisible = true;
+            $ ("#mostrar_ocultar").click(function(){
+                if (textovisible === true){
+                    $("#caja").text("");
+                } else {
+                    $("#caja").text(textoCaja);
+                }
+                textovisible = !textovisible;
+            });
+        });
+    </script>
+</body>
+</html>
