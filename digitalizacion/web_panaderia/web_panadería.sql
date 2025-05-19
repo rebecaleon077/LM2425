@@ -1,0 +1,10 @@
+CREATE DATABASE panaderia;
+
+USE panaderia;
+
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    producto VARCHAR(255) NOT NULL,
+    cantidad INT NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
